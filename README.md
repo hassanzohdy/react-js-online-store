@@ -44,3 +44,18 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## React Course 2022 Recap Part I
+
+- Creating New React Typescript Project.
+- Installing `@mongez/react-router` for handling pages routes, lazy modules and lazy apps
+- Installing `@mongez/react` for handling the entire application, like starting the application, app configurations, detect browser and device type, detect dark mode, enable/disable performance debugging mode and so on.
+- Installing `@mongez/http` for ajax requests.
+- Installing `link-module-alias` for handling paths aliases.
+- Creating `apps` directory to define our apps list.
+- Creating `apps/front-office/front-office.modules.json` to define app modules and its settings.
+- Creating `apps/front-office/front-office-provider.ts` as an entry point to our app.
+- Creating `apps/front-office/account` module and creating Login Page.
+- Creating `shared` directory for providing shared data between apps.
+- Introducing `services` concepts for handling ajax requests concepts form one point.
+- Creating `.env` file to add main information to the project such as API url, production data and app information.
