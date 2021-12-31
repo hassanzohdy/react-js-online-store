@@ -1311,10 +1311,10 @@
   resolved "https://registry.yarnpkg.com/@mongez/events/-/events-1.0.7.tgz#d33fa05054b9bc9cce82d7e0d6611c70fdc1fd57"
   integrity sha512-0nZa4jaiGQIR84AlO7j3ZV0dIpOdDR1gz3K4TOhT0A73Y3e7mjRhYIZId/x6x9zdtt7mTpvcUbA1m4iRamBhkQ==
 
-"@mongez/http@^1.0.12", "@mongez/http@^1.0.x":
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/@mongez/http/-/http-1.0.12.tgz#42f40068b6f4c5a7f5ca2002b5462d640e88714a"
-  integrity sha512-mliJgup7ey3Y1oQ54k48zSIHXKxcLsFV/QA0jf92bnn95Hc8gZpoD/oJP3PENs+OWdyA6PkjOmm06dGMvo9Viw==
+"@mongez/http@^1.0.14", "@mongez/http@^1.0.x":
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/@mongez/http/-/http-1.0.14.tgz#1d3a53eb190f005a5d612d98ff71cd1117a71be4"
+  integrity sha512-dJVpxkBPJJZyYO0szh2NOG4+15x4mMG8YI1JOsZ1b5serqBFqxWUYc5pdxTfqDtilLSNrq5QC1nTWnmLNP1PKw==
   dependencies:
     "@mongez/events" "^1.0.x"
     "@mongez/reinforcements" "^1.0.x"

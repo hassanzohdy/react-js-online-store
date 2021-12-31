@@ -25,11 +25,15 @@ export default function LoginPage() {
       // reset the error state
       setError(null);
 
+      console.log(inputs);
+
       login(inputs)
         .then((response) => {
           console.log(response.data);
         })
         .catch((error) => {
+          console.log(error);
+
           setError(error.response.data.error);
         });
     },
@@ -42,8 +46,6 @@ export default function LoginPage() {
       [inputName]: e.target.value,
     });
   };
-
-  console.log(inputs);
 
   return (
     <>

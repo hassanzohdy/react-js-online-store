@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@mongez/http": "^1.0.12",
+    "@mongez/http": "^1.0.14",
     "@mongez/react": "^1.0.11",
     "@mongez/react-router": "^1.0.15",
     "@testing-library/jest-dom": "^5.16.1",

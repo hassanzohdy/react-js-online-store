@@ -1,5 +1,5 @@
-import { ApplicationConfigurations, setAppConfigurations } from "@mongez/react";
 import Preloader from "./components/Preloader";
+import { ApplicationConfigurations, setAppConfigurations } from "@mongez/react";
 
 const appConfigurations: ApplicationConfigurations = {
   defaultLocaleCode: process.env.REACT_APP_DEFAULT_LOCALE_CODE,
