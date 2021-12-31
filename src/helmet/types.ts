@@ -5,6 +5,10 @@ export type HelmetProps = {
    */
   title: string;
   /**
+   * Define the app name, needed when appendAppName is set to true
+   */
+  appName?: string;
+  /**
    * Append app name beside the title
    *
    * @default true
@@ -25,11 +29,19 @@ export type HelmetProps = {
    * Page meta keywords
    * If passed as string, then separate each keyword with comma `,`.
    */
-  keywords: string | string[];
+  keywords?: string | string[];
   /**
    * Page image
    */
   image?: string;
+  /**
+   * Defines page url
+   * This can be changed from helmet configurations
+   * If set to true, then the current url will be grabbed directly.
+   *
+   * @default true
+   */
+  url?: boolean | string;
   /**
    * Sets Html attributes list to html tag
    */
@@ -46,6 +58,10 @@ export type HelmetProps = {
 
 export type HelmetConfigurations = {
   /**
+   * Define the app name, needed when appendAppName is set to true
+   */
+  appName?: string;
+  /**
    * Append app name beside the title
    *
    * @default true
@@ -58,6 +74,12 @@ export type HelmetConfigurations = {
    * @default " | "
    */
   appNameSeparator?: string;
+  /**
+   * Allow adding url meta tags automatically in the head tag
+   *
+   * @default true
+   */
+  autoAddUrl?: boolean;
   /**
    * Sets Html attributes list to html tag
    */

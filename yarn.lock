@@ -1294,7 +1294,7 @@
     "@mongez/reinforcements" "^1.0.x"
     immutable "^4.0.0"
 
-"@mongez/dom@^1.0.x":
+"@mongez/dom@^1.0.4", "@mongez/dom@^1.0.x":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@mongez/dom/-/dom-1.0.4.tgz#a12907d29f1e593fdfb177a98a9b1d239f2c5e8e"
   integrity sha512-nbHK8bB4Qq14brl9Y7NACJbbUIG/XmroXJW2/VwGt2OvgTc1RPgu7eVGWAZmVkgRnStipO6p1aKDuCDvCg6A/Q==
