@@ -1,3 +1,4 @@
+// TODO: add mergeClassNames prop to merge class name passed to helmet component with helmet configurations.
 export type HelmetProps = {
   /**
    * HTML Page Title
@@ -79,7 +80,7 @@ export type HelmetConfigurations = {
    *
    * @default true
    */
-  autoAddUrl?: boolean;
+  url?: boolean;
   /**
    * Sets Html attributes list to html tag
    */

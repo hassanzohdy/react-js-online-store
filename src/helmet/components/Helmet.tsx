@@ -7,21 +7,33 @@ import {
   setHTMLAttributes,
 } from "@mongez/dom";
 import React from "react";
+import { HelmetConfigurations } from "..";
+import { getHelmetConfig } from "../config";
 import { HelmetProps } from "../types";
 
 export default function Helmet(props: HelmetProps) {
   // let's define our page title
   // page title = title prop + app separator + app name
 
+  function getConfig<T>(key: keyof HelmetProps): T {
+    return props[key] !== undefined
+      ? props[key]
+      : getHelmetConfig(key as keyof HelmetConfigurations);
+  }
+
   const title = React.useMemo(() => {
     let titleSegments: string[] = [props.title];
 
-    if (props.appendAppName) {
-      if (props.appNameSeparator) {
-        titleSegments.push(props.appNameSeparator);
+    const appendAppName = getConfig<boolean>("appendAppName");
+    const appNameSeparator: string = getConfig<string>("appNameSeparator");
+    const appName: string = getConfig<string>("appName");
+
+    if (appendAppName && appName) {
+      if (appNameSeparator) {
+        titleSegments.push(appNameSeparator);
       }
 
-      titleSegments.push(props.appName!);
+      titleSegments.push(appName);
     }
 
     return titleSegments.join("");
@@ -33,14 +45,18 @@ export default function Helmet(props: HelmetProps) {
     document.documentElement.id = props.pageId;
   }
 
-  if (props.className) {
-    for (const className of props.className.split(" ")) {
+  const classes: string = getConfig<string>("className");
+
+  if (classes) {
+    for (const className of classes.split(" ")) {
       document.documentElement.classList.add(className);
     }
   }
 
-  if (props.htmlAttributes) {
-    setHTMLAttributes(props.htmlAttributes);
+  const htmlAttributes: Object = getConfig<Object>("htmlAttributes");
+
+  if (htmlAttributes) {
+    setHTMLAttributes(htmlAttributes);
   }
 
   if (props.description) {
@@ -55,12 +71,14 @@ export default function Helmet(props: HelmetProps) {
     setImage(props.image);
   }
 
-  if (props.url) {
+  const pageUrl: boolean = getConfig<boolean>("url");
+
+  if (pageUrl) {
     let url: string = "";
-    if (props.url === true) {
+    if (pageUrl === true) {
       url = window.location.href; // get current url of the page
     } else {
-      url = props.url;
+      url = pageUrl;
     }
 
     setCanonicalUrl(url);
@@ -68,8 +86,3 @@ export default function Helmet(props: HelmetProps) {
 
   return null;
 }
-
-Helmet.defaultProps = {
-  appendAppName: true,
-  url: true,
-};

@@ -1361,7 +1361,7 @@
     clsx "^1.1.1"
     web-vitals "^2.1.2"
 
-"@mongez/reinforcements@1.0.x", "@mongez/reinforcements@^1.0.x":
+"@mongez/reinforcements@1.0.x", "@mongez/reinforcements@^1.0.10", "@mongez/reinforcements@^1.0.x":
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/@mongez/reinforcements/-/reinforcements-1.0.10.tgz#6253bd4dfa1886ca5d17baaf405d92d1f866f11d"
   integrity sha512-AwUcIDqyjPSZzr12Y/iWTWizkSjfWNSKNXDCesvKSofVaXoUIaGVpCGJ0BoldYs8J3GxTJKKmLk+QlGyvO/eqw==

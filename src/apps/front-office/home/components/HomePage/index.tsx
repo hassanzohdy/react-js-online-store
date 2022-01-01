@@ -1,3 +1,4 @@
+import { Link } from "@mongez/react-router";
 import React from "react";
 import Helmet from "../../../../../helmet";
 
@@ -19,14 +20,13 @@ export default function HomePage() {
         title="My Home Page"
         pageId="home-page"
         className="my-home page-class"
-        appName="My App Name"
         url="https://google.com"
         htmlAttributes={{
           myAttr: "ok",
         }}
-        appNameSeparator=" | "
       />
       <h1>Welcome Home Page</h1>
+      <Link to="/account/login">Login</Link>
     </div>
   );
 }

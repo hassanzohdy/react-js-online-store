@@ -1,4 +1,5 @@
 import React from "react";
+import Helmet from "../../../../../../helmet";
 import { login } from "../../../services/auth";
 
 export default function LoginPage() {
@@ -49,6 +50,7 @@ export default function LoginPage() {
 
   return (
     <>
+      <Helmet title="Login Page" />
       <h1>Login Page</h1>
       <form onSubmit={performLogin}>
         {error && (
