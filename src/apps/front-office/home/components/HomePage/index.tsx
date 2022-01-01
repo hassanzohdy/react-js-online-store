@@ -3,21 +3,21 @@ import React from "react";
 import Helmet from "../../../../../helmet";
 
 export default function HomePage() {
-  const [s, ss] = React.useState(false);
+  const [s, ss] = React.useState("Home");
 
   React.useEffect(() => {
     setTimeout(() => {
-      ss(true);
+      ss("Home 2");
     }, 1000);
   }, []);
 
   return (
     <div>
       <Helmet
-        description="My Page Description"
+        description={s}
         keywords={["my", "keywords", "list", "in", "array"]}
         image="My Home image"
-        title="My Home Page"
+        title="Home Page"
         pageId="home-page"
         className="my-home page-class"
         url="https://google.com"

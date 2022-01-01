@@ -5,23 +5,26 @@ import {
   setTitle,
   setCanonicalUrl,
   setHTMLAttributes,
+  getMetaData,
 } from "@mongez/dom";
 import React from "react";
-import { HelmetConfigurations } from "..";
 import { getHelmetConfig } from "../config";
-import { HelmetProps } from "../types";
+import { HelmetConfigurations, HelmetProps } from "../types";
 
 export default function Helmet(props: HelmetProps) {
-  // let's define our page title
-  // page title = title prop + app separator + app name
-
   function getConfig<T>(key: keyof HelmetProps): T {
     return props[key] !== undefined
       ? props[key]
       : getHelmetConfig(key as keyof HelmetConfigurations);
   }
 
-  const title = React.useMemo(() => {
+  const currentMeta = React.useMemo(() => getMetaData(), []);
+
+  React.useEffect(() => {
+    // let's define our page title
+    // page title = title prop + app separator + app name
+    const clear = () => setTitle(currentMeta.title);
+
     let titleSegments: string[] = [props.title];
 
     const appendAppName = getConfig<boolean>("appendAppName");
@@ -36,53 +39,140 @@ export default function Helmet(props: HelmetProps) {
       titleSegments.push(appName);
     }
 
-    return titleSegments.join("");
-  }, [props.title]);
+    setTitle(titleSegments.join(""));
 
-  setTitle(title);
+    return clear;
+  }, [props.title, props.appName, props.appNameSeparator, props.appendAppName]);
 
-  if (props.pageId) {
+  const currentPageId = React.useMemo(() => document.documentElement.id, []);
+
+  React.useEffect(() => {
+    const clear = () => {
+      document.documentElement.id = currentPageId;
+    };
+
+    if (props.pageId === undefined) return clear;
+
     document.documentElement.id = props.pageId;
-  }
 
-  const classes: string = getConfig<string>("className");
+    return clear;
+  }, [props.pageId]);
 
-  if (classes) {
+  const currentClasses = React.useMemo(
+    () => document.documentElement.className,
+    []
+  );
+
+  React.useEffect(() => {
+    const clear = () => {
+      document.documentElement.className = currentClasses;
+    };
+
+    const classes: string = getConfig<string>("className");
+
+    if (classes === undefined) return clear;
+
     for (const className of classes.split(" ")) {
       document.documentElement.classList.add(className);
     }
-  }
 
-  const htmlAttributes: Object = getConfig<Object>("htmlAttributes");
+    return clear;
+  }, [props.className]);
 
-  if (htmlAttributes) {
+  const currentHTMLAttributes = React.useMemo(() => {
+    type Attributes = {
+      [attributeKey: string]: string;
+    };
+
+    const attributesList: Attributes = {};
+
+    for (const attribute of document.documentElement.attributes) {
+      attributesList[attribute.name] = attribute.value;
+    }
+
+    return attributesList;
+  }, []);
+
+  // html attributes
+  React.useEffect(() => {
+    const clear = () => {
+      setHTMLAttributes(currentHTMLAttributes);
+    };
+
+    const htmlAttributes: Object = getConfig<Object>("htmlAttributes");
+
+    if (htmlAttributes === undefined) return clear;
+
     setHTMLAttributes(htmlAttributes);
-  }
 
-  if (props.description) {
-    setDescription(props.description);
-  }
+    return clear;
+  }, [props.htmlAttributes]);
 
-  if (props.keywords) {
-    setKeywords(props.keywords);
-  }
+  // description
+  React.useEffect(() => {
+    const clear = () => setDescription(currentMeta.description || "");
 
-  if (props.image) {
-    setImage(props.image);
-  }
+    if (props.description === undefined) return clear;
 
-  const pageUrl: boolean = getConfig<boolean>("url");
+    if (props.description) {
+      setDescription(props.description);
+    }
 
-  if (pageUrl) {
+    return clear;
+  }, [props.description]);
+
+  // keywords
+  React.useEffect(() => {
+    const clear = () => {
+      setKeywords(currentMeta.keywords || "");
+    };
+
+    if (props.keywords === undefined) return clear;
+
+    if (props.keywords) {
+      setKeywords(props.keywords);
+    }
+
+    return clear;
+  }, [props.keywords]);
+
+  // page image
+  React.useEffect(() => {
+    const clear = () => {
+      setImage(currentMeta.image || "");
+    };
+
+    if (props.image === undefined) return clear;
+
+    if (props.image) {
+      setImage(props.image);
+    }
+
+    return clear;
+  }, [props.image]);
+
+  // page url
+  React.useEffect(() => {
+    const clear = () => {
+      setCanonicalUrl(currentMeta.url || "");
+    };
+
+    const pageUrl: boolean | string = getConfig<boolean | string>("url");
+
+    if (pageUrl === undefined) return clear;
+
     let url: string = "";
+
     if (pageUrl === true) {
       url = window.location.href; // get current url of the page
     } else {
-      url = pageUrl;
+      url = pageUrl as string;
     }
 
     setCanonicalUrl(url);
-  }
+
+    return clear;
+  }, [props.url]);
 
   return null;
 }

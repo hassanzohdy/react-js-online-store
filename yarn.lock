@@ -1294,10 +1294,10 @@
     "@mongez/reinforcements" "^1.0.x"
     immutable "^4.0.0"
 
-"@mongez/dom@^1.0.4", "@mongez/dom@^1.0.x":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@mongez/dom/-/dom-1.0.4.tgz#a12907d29f1e593fdfb177a98a9b1d239f2c5e8e"
-  integrity sha512-nbHK8bB4Qq14brl9Y7NACJbbUIG/XmroXJW2/VwGt2OvgTc1RPgu7eVGWAZmVkgRnStipO6p1aKDuCDvCg6A/Q==
+"@mongez/dom@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@mongez/dom/-/dom-1.0.5.tgz#7eb26e7d11834d9d355ecb6d899e7ee6215cddd0"
+  integrity sha512-6pLONGVLgXPHHYftGXxLno5moLz4I4pij7qqoAbxD/gTIA2ozS9nIOVeHTmryJy/LvzKBSnW3Ou5YXAEpx3Vjw==
 
 "@mongez/encryption@^1.0.x":
   version "1.0.2"
@@ -1822,15 +1822,10 @@
   resolved "https://registry.yarnpkg.com/@types/mime/-/mime-1.3.2.tgz#93e25bf9ee75fe0fd80b594bc4feb0e862111b5a"
   integrity sha512-YATxVxgRqNH6nHEIsvg6k2Boc1JHI9ZbH5iWFFv/MTkchz3b1ieGDa5T0a9RznNdI0KhVbdbWSN+KWWrQZRxTw==
 
-"@types/node@*":
+"@types/node@*", "@types/node@^17.0.5":
   version "17.0.5"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.5.tgz#57ca67ec4e57ad9e4ef5a6bab48a15387a1c83e0"
   integrity sha512-w3mrvNXLeDYV1GKTZorGJQivK6XLCoGwpnyJFbJVK/aTBQUxOCaa/GlFAAN3OTDFcb7h5tiFG+YXCO2By+riZw==
-
-"@types/node@^16.11.17":
-  version "16.11.17"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.17.tgz#ae146499772e33fc6382e1880bc567e41a528586"
-  integrity sha512-C1vTZME8cFo8uxY2ui41xcynEotVkczIVI5AjLmy5pkpBv/FtG+jhtOlfcPysI8VRVwoOMv6NJm44LGnoMSWkw==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
