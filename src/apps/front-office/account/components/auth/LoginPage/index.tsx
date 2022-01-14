@@ -1,5 +1,5 @@
+import Helmet from "@mongez/react-helmet";
 import React from "react";
-import Helmet from "../../../../../../helmet";
 import { login } from "../../../services/auth";
 
 export default function LoginPage() {
