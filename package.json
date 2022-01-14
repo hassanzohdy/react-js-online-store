@@ -34,6 +34,7 @@
   "_moduleAliases": {
     "apps": "./src/apps",
     "shared": "./src/shared",
+    "design-system": "./src/apps/front-office/design-system",
     "app": "./src/apps/front-office"
   },
   "eslintConfig": {
