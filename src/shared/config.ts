@@ -5,6 +5,12 @@ const appConfigurations: ApplicationConfigurations = {
   localization: {
     defaultLocaleCode: process.env.REACT_APP_DEFAULT_LOCALE_CODE,
     fallback: process.env.REACT_APP_FALLBACK_LOCALE_CODE,
+    locales: {
+      en: {
+        direction: "ltr",
+        name: "English",
+      },
+    },
   },
   helmet: {
     appName: "onlineStore",
