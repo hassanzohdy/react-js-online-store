@@ -1,20 +1,11 @@
-import { Link } from "@mongez/react-router";
 import React from "react";
-import Helmet from "../../../../../helmet";
+import Helmet from "@mongez/react-helmet";
+import { Link } from "@mongez/react-router";
 
 export default function HomePage() {
-  const [s, ss] = React.useState("Home");
-
-  React.useEffect(() => {
-    setTimeout(() => {
-      ss("Home 2");
-    }, 1000);
-  }, []);
-
   return (
     <div>
       <Helmet
-        description={s}
         keywords={["my", "keywords", "list", "in", "array"]}
         image="My Home image"
         title="Home Page"

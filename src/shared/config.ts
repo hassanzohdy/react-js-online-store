@@ -1,9 +1,15 @@
 import Preloader from "./components/Preloader";
 import { ApplicationConfigurations, setAppConfigurations } from "@mongez/react";
-import { setHelmetConfigurations } from "../helmet/config";
 
 const appConfigurations: ApplicationConfigurations = {
   defaultLocaleCode: process.env.REACT_APP_DEFAULT_LOCALE_CODE,
+  helmet: {
+    appName: "onlineStore",
+    appendAppName: true,
+    appNameSeparator: " | ",
+    translatable: true,
+    translateAppName: true,
+  },
   router: {
     basePath: process.env.REACT_APP_BASE_PATH,
     notFound: {
@@ -18,8 +24,3 @@ const appConfigurations: ApplicationConfigurations = {
 };
 
 setAppConfigurations(appConfigurations);
-
-setHelmetConfigurations({
-  appName: process.env.REACT_APP_NAME,
-  className: "html-class",
-});

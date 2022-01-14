@@ -1,5 +1,4 @@
-import "shared/config";
-import "shared/apps-list";
+import "shared/shared-provider";
 import startApplication from "@mongez/react";
 
 startApplication();
