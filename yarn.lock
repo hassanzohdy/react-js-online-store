@@ -1390,6 +1390,16 @@
     "@mongez/events" "^1.0.x"
     "@mongez/reinforcements" "^1.0.x"
 
+"@mongez/validator@^1.0.10":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@mongez/validator/-/validator-1.0.10.tgz#e395c834f41afa68f623dc946811fd8dfb52610a"
+  integrity sha512-vT87hdb586LukD8l6P3pfzvzwRWxzjJJ45AV+sZRQlwtqR58B8hPKuGAkSdtIVpW/6xHjFBtzaWxle0ItwMbVQ==
+  dependencies:
+    "@mongez/events" "^1.0.x"
+    "@mongez/localization" "^1.0.x"
+    "@mongez/reinforcements" "^1.0.x"
+    "@mongez/supportive-is" "^1.0.x"
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
