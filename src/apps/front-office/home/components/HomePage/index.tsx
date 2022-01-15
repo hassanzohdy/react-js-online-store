@@ -5,7 +5,7 @@ import theme from "design-system/core/theme";
 
 export default function HomePage() {
   return (
-    <div style={{ color: theme.colors.primary }}>
+    <div>
       <Helmet title="Home Page" />
       <h1>Welcome Home Page</h1>
       <Link to="/account/login">Login</Link>

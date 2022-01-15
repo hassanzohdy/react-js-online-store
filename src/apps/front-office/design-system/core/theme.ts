@@ -1,4 +1,5 @@
 import { Theme } from "../types/theme";
+import updateCssVars from "../utilities/update-css-vars";
 
 const theme: Theme = {
   colors: {
@@ -6,5 +7,7 @@ const theme: Theme = {
     secondary: "#fd3500",
   },
 };
+
+updateCssVars("--colors-primary", theme.colors.primary);
 
 export default theme;

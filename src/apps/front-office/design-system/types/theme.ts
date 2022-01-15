@@ -6,7 +6,7 @@ export type Theme = {
     /**
      * Primary Color
      */
-    primary?: string;
+    primary: string;
     /**
      * Secondary Color
      */
