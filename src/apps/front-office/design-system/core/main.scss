@@ -7,6 +7,7 @@ html {
   font-size: var(--paper-fontSize);
   color: var(--paper-color);
   background: var(--paper-background);
+  transition: all 0.4s ease-in-out;
 }
 
 body {

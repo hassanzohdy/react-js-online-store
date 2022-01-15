@@ -8,6 +8,7 @@ import { Theme } from "../types/theme";
 // --font-family-secondary
 export default function updateCssVars(theme: Theme): void {
   const flattenTheme = Obj.flatten(theme, "-");
+
   for (let key in flattenTheme) {
     cssVariable(`--${key}`, flattenTheme[key]);
   }

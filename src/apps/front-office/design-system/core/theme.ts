@@ -14,7 +14,7 @@ const theme: Theme = {
     color: "#000",
     background: "#FFF",
     fontFamily: "Roboto",
-    fontSize: "10px",
+    fontSize: "16px",
   },
 };
 
