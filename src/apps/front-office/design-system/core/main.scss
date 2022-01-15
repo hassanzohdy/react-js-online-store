@@ -1,3 +1,14 @@
 h1 {
   color: var(--colors-primary);
 }
+
+html {
+  font-family: var(--paper-fontFamily);
+  font-size: var(--paper-fontSize);
+  color: var(--paper-color);
+  background: var(--paper-background);
+}
+
+body {
+  margin: 0;
+}

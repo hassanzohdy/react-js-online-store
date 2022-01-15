@@ -1,13 +1,21 @@
 import { Theme } from "../types/theme";
-import updateCssVars from "../utilities/update-css-vars";
 
 const theme: Theme = {
   colors: {
     primary: "#F00",
     secondary: "#fd3500",
   },
+  font: {
+    family: {
+      primary: "Roboto",
+    },
+  },
+  paper: {
+    color: "#000",
+    background: "#FFF",
+    fontFamily: "Roboto",
+    fontSize: "10px",
+  },
 };
-
-updateCssVars("--colors-primary", theme.colors.primary);
 
 export default theme;

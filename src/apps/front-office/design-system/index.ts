@@ -1,2 +1,7 @@
 import "./core/main.scss";
-import "./core/theme";
+import setupTheme from "./core/setup";
+import theme from "./core/theme";
+import updateCssVars from "./utilities/update-css-vars";
+
+setupTheme();
+updateCssVars(theme);

@@ -1294,7 +1294,12 @@
     "@mongez/reinforcements" "^1.0.x"
     immutable "^4.0.0"
 
-"@mongez/dom@^1.0.9", "@mongez/dom@^1.0.x":
+"@mongez/dom@^1.0.10":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@mongez/dom/-/dom-1.0.10.tgz#6c25a02a91842fd8a37900f77fcc7455d2684568"
+  integrity sha512-0KKTkdcjd/fUMhG6gJlKsBrP+taBUDTwdPe0VIp2xEAmD/Ew9evViDVoh8KX+DYF2Y5PQKXurLr+B/vmF9rJ4Q==
+
+"@mongez/dom@^1.0.x":
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/@mongez/dom/-/dom-1.0.9.tgz#ee3bcf57100733a1d6be6b41ed0a51c41491e13c"
   integrity sha512-keERDfT+j+3pH1YHnRldsytm+hJ/jQtVJ8vOE6WS7TxVoHXmPUlu5r+W9RUgnzsBvChAiPQvyapqSdujc+LxSw==
@@ -1349,10 +1354,10 @@
     query-string "^7.0.1"
     react-router-dom "^5.2.0"
 
-"@mongez/react@^1.0.16":
-  version "1.0.16"
-  resolved "https://registry.yarnpkg.com/@mongez/react/-/react-1.0.16.tgz#a3e77a9f785e61370d887f02433447bc7cb27725"
-  integrity sha512-iThTm6+gnvAJLVSJ29nGUP92ZI0GcbfR07L9E8AnSy1BC7r0w7oXy0ZyRXWhl42Gyajs40paTJ0r7UZ5bTOUsw==
+"@mongez/react@^1.0.17":
+  version "1.0.17"
+  resolved "https://registry.yarnpkg.com/@mongez/react/-/react-1.0.17.tgz#bb0b9b99c35eea1379dcc1e2c432576addc60f99"
+  integrity sha512-t4bEiVqErUU8fDSKPTIfNkKtz3qZzJv5Xz/MOsKx4R3X+2Mr0mqB8SLnJrsXoEuZGgdO5HfduMSWHCE7SVc4yg==
   dependencies:
     "@mongez/cache" "^1.0.x"
     "@mongez/config" "^1.0.x"
@@ -1369,10 +1374,18 @@
     clsx "^1.1.1"
     web-vitals "^2.1.3"
 
-"@mongez/reinforcements@1.0.x", "@mongez/reinforcements@^1.0.17", "@mongez/reinforcements@^1.0.x":
+"@mongez/reinforcements@1.0.x", "@mongez/reinforcements@^1.0.x":
   version "1.0.17"
   resolved "https://registry.yarnpkg.com/@mongez/reinforcements/-/reinforcements-1.0.17.tgz#1f5bc8b6a8287aa462308630ba362a4cb3d66b14"
   integrity sha512-IQQ0OGiqzW8bn5gpeJ6u0UpUs3XGLoo14iIt4vMBC8LReQCmnZGVNqRBNTHU6Htu7LnSNAClPsZkRecBJ5DDgQ==
+  dependencies:
+    immutable "^4.0.0"
+    sprintf-js "^1.1.2"
+
+"@mongez/reinforcements@^1.0.18":
+  version "1.0.18"
+  resolved "https://registry.yarnpkg.com/@mongez/reinforcements/-/reinforcements-1.0.18.tgz#7234baf0bcaa8d55751011dbeb844a9470283a21"
+  integrity sha512-MCLBvsH3iYRUkPi77SsMLnPDD0HkoqYlsfg+6F7QaxYPNEQU9MyyNpT7tqKlCG2+Y7/NBqVaeX1/bsyBJuQwCQ==
   dependencies:
     immutable "^4.0.0"
     sprintf-js "^1.1.2"

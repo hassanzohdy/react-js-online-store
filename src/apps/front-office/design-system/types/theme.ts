@@ -12,4 +12,43 @@ export type Theme = {
      */
     secondary?: string;
   };
+  /**
+   * Font settings
+   */
+  font: {
+    /**
+     * Font family list
+     */
+    family?: {
+      /**
+       * Primary font family
+       */
+      primary: string;
+      /**
+       * Secondary font family
+       */
+      secondary?: string;
+    };
+  };
+  /**
+   * Document paper base settings
+   */
+  paper?: {
+    /**
+     * Main color for the entire paper
+     */
+    color?: string;
+    /**
+     * Paper Background
+     */
+    background?: string;
+    /**
+     * Main font family
+     */
+    fontFamily?: string;
+    /**
+     * Font family root size
+     */
+    fontSize?: string;
+  };
 };
