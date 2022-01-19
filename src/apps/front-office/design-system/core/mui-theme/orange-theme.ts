@@ -9,7 +9,7 @@ const theme: ThemeOptions = {
       primary: "#000",
     },
     primary: {
-      main: "#ff00bc",
+      main: "#ff4500",
     },
   },
   typography: {
@@ -21,6 +21,6 @@ const theme: ThemeOptions = {
   },
 };
 
-const muiTheme = createTheme(theme);
+const orangeTheme = createTheme(theme);
 
-export default muiTheme;
+export default orangeTheme;

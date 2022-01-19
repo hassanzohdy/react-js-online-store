@@ -1,3 +1,4 @@
+import { ThemeOptions } from "@mui/material";
 import React from "react";
 
 /**
@@ -6,4 +7,8 @@ import React from "react";
  */
 export type BaseLayoutProps = {
   children: React.ReactChildren;
+};
+
+export type LayoutContextProps = {
+  setTheme: (theme: ThemeOptions) => void;
 };
