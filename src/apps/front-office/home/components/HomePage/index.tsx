@@ -1,22 +1,17 @@
 import Helmet from "@mongez/react-helmet";
 import { Button, Typography } from "@mui/material";
+import { ThemeName } from "design-system/types/theme";
 import useLayout from "design-system/core/hooks/useLayout";
-import muiTheme from "design-system/core/mui-theme";
-import orangeTheme from "design-system/core/mui-theme/orange-theme";
 
-let currentTheme = "default";
+const themesList: ThemeName[] = ["default", "dark", "orange"];
 
 export default function HomePage() {
   const { setTheme } = useLayout();
 
-  const changeTheme = () => {
-    if (currentTheme === "default") {
-      setTheme(orangeTheme);
-      currentTheme = "orange";
-    } else {
-      setTheme(muiTheme);
-      currentTheme = "default";
-    }
+  const changeTheme = (themeName: ThemeName) => {
+    return () => {
+      setTheme(themeName);
+    };
   };
 
   return (
@@ -25,9 +20,11 @@ export default function HomePage() {
       <Typography color="primary" variant="h1">
         Welcome Home Page
       </Typography>
-      <Button onClick={changeTheme} variant="contained">
-        Welcome
-      </Button>
+      {themesList.map((theme) => (
+        <Button key={theme} onClick={changeTheme(theme)} variant="contained">
+          {theme} Theme
+        </Button>
+      ))}
       <span>Another Text</span>
       <br />
     </div>

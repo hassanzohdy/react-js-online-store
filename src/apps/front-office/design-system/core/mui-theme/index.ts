@@ -12,6 +12,7 @@ const theme: ThemeOptions = {
       main: "#ff00bc",
     },
   },
+
   typography: {
     fontFamily: "",
     h1: {

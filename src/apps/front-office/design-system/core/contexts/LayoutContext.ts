@@ -1,9 +1,9 @@
-import { ThemeOptions } from "@mui/material";
 import React from "react";
 import { LayoutContextProps } from "../../types/layout";
+import { ThemeName } from "../../types/theme";
 
 const defaultProps: LayoutContextProps = {
-  setTheme: (theme: ThemeOptions): void => {},
+  setTheme: (theme: ThemeName): void => {},
 };
 
 const LayoutContext = React.createContext<LayoutContextProps>(defaultProps);

@@ -1,5 +1,6 @@
 import { ThemeOptions } from "@mui/material";
 import React from "react";
+import { ThemeName } from "./theme";
 
 /**
  * Base layout props
@@ -10,5 +11,5 @@ export type BaseLayoutProps = {
 };
 
 export type LayoutContextProps = {
-  setTheme: (theme: ThemeOptions) => void;
+  setTheme: (theme: ThemeName) => void;
 };

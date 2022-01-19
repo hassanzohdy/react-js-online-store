@@ -1,4 +1,3 @@
-import { Obj } from "@mongez/reinforcements";
 import { Theme } from "../types/theme";
 
 const theme: Theme = {

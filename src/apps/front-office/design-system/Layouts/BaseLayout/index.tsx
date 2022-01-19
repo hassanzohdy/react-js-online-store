@@ -6,15 +6,21 @@ import { ThemeOptions, ThemeProvider } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
 import muiTheme from "design-system/core/mui-theme";
 import LayoutContext from "../../core/contexts/LayoutContext";
+import { ThemeName } from "../../types/theme";
+import themesList from "../../core/mui-theme/themes-list";
 
 export default function BaseLayout({ children }: BaseLayoutProps) {
   const [currentTheme, setCurrentTheme] =
     React.useState<ThemeOptions>(muiTheme);
 
+  const setTheme = (theme: ThemeName) => {
+    setCurrentTheme(themesList[theme]);
+  };
+
   return (
     <LayoutContext.Provider
       value={{
-        setTheme: setCurrentTheme,
+        setTheme: setTheme,
       }}
     >
       <ThemeProvider theme={currentTheme}>

@@ -1,3 +1,5 @@
+import { ThemeOptions } from "@mui/material";
+
 export type Theme = {
   /**
    * Main Theme Colors
@@ -51,4 +53,13 @@ export type Theme = {
      */
     fontSize?: string;
   };
+};
+
+export type ThemeName = "default" | "dark" | "orange";
+
+/**
+ * List of available themes
+ */
+export type ThemesList = {
+  [theme in ThemeName]: ThemeOptions;
 };
