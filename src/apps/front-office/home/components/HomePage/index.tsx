@@ -2,8 +2,7 @@ import Helmet from "@mongez/react-helmet";
 import { Button, Typography } from "@mui/material";
 import { ThemeName } from "design-system/types/theme";
 import useLayout from "design-system/core/hooks/useLayout";
-
-const themesList: ThemeName[] = ["default", "dark", "orange"];
+import themesList from "design-system/utilities/themes-list";
 
 export default function HomePage() {
   const { setTheme } = useLayout();

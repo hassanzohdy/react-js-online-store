@@ -1,24 +1,24 @@
+import baseTheme from "../theme";
 import { createTheme, ThemeOptions } from "@mui/material";
 
 const theme: ThemeOptions = {
   palette: {
     background: {
-      default: "#FFF",
+      default: baseTheme.paper.background,
     },
     text: {
-      primary: "#000",
+      primary: baseTheme.paper.color,
     },
     primary: {
-      main: "#ff00bc",
+      main: baseTheme.colors.primary,
+    },
+    secondary: {
+      main: baseTheme.colors.secondary!,
     },
   },
-
   typography: {
-    fontFamily: "",
-    h1: {
-      fontSize: "3rem",
-      fontWeight: "bold",
-    },
+    htmlFontSize: Number(baseTheme.paper.fontFamily),
+    fontFamily: baseTheme.paper.fontFamily,
   },
 };
 

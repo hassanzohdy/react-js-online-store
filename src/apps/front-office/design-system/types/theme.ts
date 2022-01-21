@@ -35,15 +35,15 @@ export type Theme = {
   /**
    * Document paper base settings
    */
-  paper?: {
+  paper: {
     /**
      * Main color for the entire paper
      */
-    color?: string;
+    color: string;
     /**
      * Paper Background
      */
-    background?: string;
+    background: string;
     /**
      * Main font family
      */
@@ -51,7 +51,7 @@ export type Theme = {
     /**
      * Font family root size
      */
-    fontSize?: string;
+    fontSize?: string | number;
   };
 };
 
